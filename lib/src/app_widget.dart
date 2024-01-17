@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'modules/start_walk/start_walk_page.dart';
+import 'modules/splash/splash_page.dart';
 
 class AppWidget extends StatefulWidget {
   const AppWidget({super.key});
@@ -18,7 +18,7 @@ class _AppWidgetState extends State<AppWidget> {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const StartWalkPage(),
+      home: const SplashPage(),
     );
   }
 }

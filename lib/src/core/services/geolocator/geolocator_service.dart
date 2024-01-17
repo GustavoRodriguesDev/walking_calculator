@@ -1,9 +1,12 @@
+import 'dart:async';
+
 import 'package:geolocator/geolocator.dart';
 import 'package:walking_calculator/src/core/services/geolocator/position_model.dart';
 
 abstract class IGeolocatorService {
-  void checkPermissions();
+  Future<void> checkPermissions();
   Future<PositionModel> getActualLocation();
+  Stream<PositionModel> getActualLocationStream();
   double calculateDistance({
     required PositionModel beginPosition,
     required PositionModel endPosition,
@@ -12,10 +15,12 @@ abstract class IGeolocatorService {
 
 class GeoLocatorService implements IGeolocatorService {
   @override
-  void checkPermissions() async {
+  Future<void> checkPermissions() async {
+    Geolocator.getServiceStatusStream();
+
     final permission = await Geolocator.checkPermission();
     if (LocationPermission.always != permission) {
-      Geolocator.requestPermission();
+      await Geolocator.requestPermission();
     }
   }
 
@@ -27,6 +32,16 @@ class GeoLocatorService implements IGeolocatorService {
       longitude: position.longitude,
       date: position.timestamp.toLocal(),
     );
+  }
+
+  @override
+  Stream<PositionModel> getActualLocationStream() {
+    final position = Geolocator.getPositionStream();
+    return position.map((event) => PositionModel(
+          latitude: event.latitude,
+          longitude: event.longitude,
+          date: event.timestamp,
+        ));
   }
 
   @override
