@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:walking_calculator/src/get_it_injection.dart';
-import 'package:walking_calculator/src/modules/start_walk/walk_controller.dart';
+import 'package:walking_calculator/src/modules/start_walk/controller/walk_controller.dart';
 
-import '../../core/widget/map_widget/map_widget.dart';
-import 'state/walk_state.dart';
+import '../../../core/widget/map_widget/map_widget.dart';
+import '../state/walk_state.dart';
 
 class StartWalkPage extends StatefulWidget {
   const StartWalkPage({super.key});

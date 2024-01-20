@@ -4,8 +4,8 @@ import 'package:flutter/foundation.dart';
 import 'package:walking_calculator/src/core/services/geolocator/geolocator_service.dart';
 import 'package:walking_calculator/src/core/widget/map_widget/map_controller.dart';
 
-import '../../core/services/geolocator/position_model.dart';
-import 'state/walk_state.dart';
+import '../../../core/services/geolocator/position_model.dart';
+import '../state/walk_state.dart';
 
 class WalkController extends ValueNotifier<WalkState> {
   final IGeolocatorService geoLocatorService;

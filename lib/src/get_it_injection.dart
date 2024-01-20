@@ -2,7 +2,7 @@ import 'package:get_it/get_it.dart';
 import 'package:walking_calculator/src/core/widget/map_widget/map_controller.dart';
 
 import 'core/services/geolocator/geolocator_service.dart';
-import 'modules/start_walk/walk_controller.dart';
+import 'modules/start_walk/controller/walk_controller.dart';
 
 final getIt = GetIt.instance;
 
