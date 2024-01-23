@@ -4,7 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:walking_calculator/src/core/services/geolocator/geolocator_service.dart';
 import 'package:walking_calculator/src/core/widget/map_widget/map_controller.dart';
 
-import '../../../core/services/geolocator/position_model.dart';
+import '../../../core/model/position_model.dart';
 import '../state/walk_state.dart';
 
 class WalkController extends ValueNotifier<WalkState> {
@@ -30,9 +30,9 @@ class WalkController extends ValueNotifier<WalkState> {
           beginPosition: value.positions[value.positions.length - 2],
           endPosition: value.positions.last,
         );
-        final walkingDistance = value.walkingDistance + distance;
+        final walkingDistance = value.walkDistance + distance;
         final newValue = value.copyWith(
-          walkingDistance: walkingDistance,
+          walkDistance: walkingDistance,
           targetPercentageAchieved:
               ((walkingDistance * 100) / value.walkingGoal) / 100,
         );
@@ -53,7 +53,7 @@ class WalkController extends ValueNotifier<WalkState> {
     value = value.copyWith(
       walkButtonState: ButtonState.stop,
       positions: [],
-      walkingDistance: 0,
+      walkDistance: 0,
       targetPercentageAchieved: 0,
     );
     mapController.stopDrawerPolilynes();

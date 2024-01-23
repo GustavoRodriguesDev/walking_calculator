@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:geolocator/geolocator.dart';
-import 'package:walking_calculator/src/core/services/geolocator/position_model.dart';
+import 'package:walking_calculator/src/core/model/position_model.dart';
 
 abstract class IGeolocatorService {
   Future<void> checkPermissions();

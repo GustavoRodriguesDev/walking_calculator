@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:walking_calculator/src/core/services/geolocator/position_model.dart';
+import 'package:walking_calculator/src/core/model/position_model.dart';
 import 'package:walking_calculator/src/core/widget/map_widget/map_state.dart';
 
 import '../../services/geolocator/geolocator_service.dart';

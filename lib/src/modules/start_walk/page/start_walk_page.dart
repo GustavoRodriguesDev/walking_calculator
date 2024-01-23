@@ -76,7 +76,7 @@ class _StartWalkPageState extends State<StartWalkPage> {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Text(
-                              "${state.walkingDistance.toStringAsPrecision(2)} km",
+                              "${state.walkDistance.toStringAsPrecision(2)} km",
                               style: const TextStyle(
                                 fontSize: 24,
                               ),

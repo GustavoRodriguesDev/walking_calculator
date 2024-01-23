@@ -1,14 +1,14 @@
-import '../../../core/services/geolocator/position_model.dart';
+import '../../../core/model/position_model.dart';
 
 class WalkState {
-  final double walkingDistance;
+  final double walkDistance;
   final double targetPercentageAchieved;
   final ButtonState walkButtonState;
   final List<PositionModel> positions;
   final double walkingGoal;
 
   WalkState({
-    this.walkingDistance = 0,
+    this.walkDistance = 0,
     this.walkButtonState = ButtonState.stop,
     this.targetPercentageAchieved = 0,
     this.positions = const [],
@@ -16,14 +16,14 @@ class WalkState {
   });
 
   WalkState copyWith({
-    double? walkingDistance,
+    double? walkDistance,
     double? targetPercentageAchieved,
     ButtonState? walkButtonState,
     List<PositionModel>? positions,
     double? walkingGoal,
   }) {
     return WalkState(
-      walkingDistance: walkingDistance ?? this.walkingDistance,
+      walkDistance: walkDistance ?? this.walkDistance,
       targetPercentageAchieved:
           targetPercentageAchieved ?? this.targetPercentageAchieved,
       walkButtonState: walkButtonState ?? this.walkButtonState,

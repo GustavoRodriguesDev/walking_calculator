@@ -1,5 +1,5 @@
 import 'package:flutter/foundation.dart';
-import 'package:walking_calculator/src/core/services/geolocator/position_model.dart';
+import 'package:walking_calculator/src/core/model/position_model.dart';
 
 class MapState {
   final List<PositionModel> positions;
