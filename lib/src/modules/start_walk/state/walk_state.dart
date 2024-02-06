@@ -33,4 +33,4 @@ class WalkState {
   }
 }
 
-enum ButtonState { stop, play }
+enum ButtonState { stop, play, pause }

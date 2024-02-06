@@ -4,14 +4,14 @@ import 'package:walking_calculator/src/core/model/walking_model.dart';
 import 'package:walking_calculator/src/core/services/local_storage/i_local_storage.dart';
 import 'package:walking_calculator/src/core/services/walk_service/walk_service.dart';
 
-class localStorageMock extends Mock implements IlocalStorage {}
+class LocalStorageMock extends Mock implements IlocalStorage {}
 
 void main() {
   late IlocalStorage localStorage;
   late IWalkService walkService;
 
   setUp(() {
-    localStorage = localStorageMock();
+    localStorage = LocalStorageMock();
     walkService = WalkService(localStorage);
 
     registerFallbackValue('');

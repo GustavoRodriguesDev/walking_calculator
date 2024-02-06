@@ -94,14 +94,14 @@ class _StartWalkPageState extends State<StartWalkPage> {
                         if (state.walkButtonState == ButtonState.stop) ...{
                           ElevatedButton(
                             onPressed: () {
-                              walkController.startWalk();
+                              walkController.startWalking();
                             },
                             child: const Text('Iniciar'),
                           )
                         } else ...{
                           ElevatedButton(
                             onPressed: () {
-                              walkController.stop();
+                              walkController.stopWalkinkg();
                             },
                             child: const Text('Parar'),
                           )

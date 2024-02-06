@@ -47,13 +47,18 @@ class MapController extends ValueNotifier<MapState> {
     final newState = value;
     final newValue = newState.copyWith(isDrawerPolilynes: true);
     value = newValue;
-   
   }
 
   void stopDrawerPolilynes() {
     final newState = value;
     final newValue = newState.copyWith(isDrawerPolilynes: false);
     newValue.positions.clear();
+    value = newValue;
+  }
+
+  void pauseDrawerPolilynes() {
+    final newState = value;
+    final newValue = newState.copyWith(isDrawerPolilynes: false);
     value = newValue;
   }
 
